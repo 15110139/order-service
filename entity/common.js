@@ -1,6 +1,5 @@
 const shortId = require("shortid")
 const validator = require('validator');
-const bcrypt = require('bcrypt');
 
 class CommonEntity {
     /**
