@@ -34,6 +34,7 @@ class CreateOrderApplication {
      * @param {String} orderData.productId
      */
     async execute(orderData) {
+        console.log("Data create order",JSON.stringify(orderData))
         const {
            userId,amount,productId
         } = orderData
