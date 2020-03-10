@@ -5,7 +5,7 @@ const { loadProto } = require("../../common/load-proto");
 
 const protoFile = path.join(__dirname,  "../../../../", "protobuf/health-check.proto");
 const proto = loadProto(protoFile);
-const service  = proto.order_service.OrderService.service;
+const service  = proto.health_check.Health.service;
 
 module.exports.healthCheckService = {
   service,

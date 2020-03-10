@@ -1,27 +1,17 @@
-const {
-  ErrorCustom
-} = require('../common/error-custom')
-const {
-  ErrorObject
-} = require('../common/error-object')
+const { ErrorCustom } = require("../common/error-custom");
+const { ErrorObject } = require("../common/error-object");
 
-
-const {
-  OrderEntity,
-  CommonEntity
-} = require('../../entity')
-
-
+const { OrderEntity, CommonEntity } = require("../../entity");
 
 class CheckHealthApplication {
   /**
-   * 
-   * @param {String} service 
+   *
+   * @param {String} service
    */
   async execute(service) {
-      console.log("Check health check:",service )
-      return 1
+    console.log("Check health check:", service);
+    return { status: "SERVING" };
   }
 }
 
-module.exports.CheckHealthApplication = CheckHealthApplication
+module.exports.CheckHealthApplication = CheckHealthApplication;
