@@ -1,9 +1,11 @@
-const {CreateOrderApplication} = require('./create-order')
-const { ErrorCustom } = require('./common/error-custom')
-const { ErrorObject } = require('./common/error-object')
+const { CreateOrderApplication } = require("./create-order");
+const { CheckHealthApplication } = require("./health-check");
+const { ErrorCustom } = require("./common/error-custom");
+const { ErrorObject } = require("./common/error-object");
 
 module.exports = {
-    CreateOrderApplication,
-    ErrorCustom,
-    ErrorObject
-}
+  CheckHealthApplication,
+  CreateOrderApplication,
+  ErrorCustom,
+  ErrorObject
+};

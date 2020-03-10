@@ -4,6 +4,10 @@ const {
   orderService
 } = require("./service/order");
 
+const {
+  healthCheckService
+} = require("./service/health-check")
+
 
 class GRPCServer {
   constructor(options) {
@@ -40,6 +44,7 @@ class GRPCServer {
       //   this.server.addService(service.service, serviceHandlers);
       // });
       this.server.addService(orderService.service,orderService.handlers)
+      this.server.addService(healthCheckService.service,healthCheckService.handlers)
     } catch (error) {
       this.logger.error("Error during loading services");
       this.logger.error(error);
